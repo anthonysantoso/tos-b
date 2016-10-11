@@ -1,0 +1,33 @@
+\documentclass[14.4pt]{article}
+\usepackage{csvsimple}
+\begin{filecontents*}{no2.csv}
+
+
+asp, aspname, ispv6c, ispv6p, samples
+AS4796	BANDUNG-NET-AS-AP Institute of Technology Bandung	88.32%	19.93%	3,938
+AS4795	INDOSATM2-ID INDOSATM2 ASN	49.32%	40.38%	20,847
+AS17996	UIINET-ID-AP PT Global Prima Utama	7.73%	7.73%	1,086
+
+\end{filecontents*}
+
+
+\title{UTS TOS}
+\author{108}
+\date{\today}
+\begin{document}
+
+
+\maketitle
+ \section{no 3}
+\section*{tabelnya}
+    \begin{tabular}{l|l|l|l|l}%
+   \bfseries asp & \bfseries aspname & \bfseries ipv6c &\bfseries ipv6p &\bfseries samples
+    \csvreader[head to column names]{no2.csv}{}
+    {\\\\\\hline\csvcoli&\csvcolii&\csvcoli&\csvcoli&\csvcoli}
+    \end{tabular}
+ 
+
+
+
+\end{document}
+
